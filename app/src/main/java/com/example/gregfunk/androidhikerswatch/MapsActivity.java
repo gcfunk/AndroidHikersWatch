@@ -53,7 +53,8 @@ public class MapsActivity extends FragmentActivity implements LocationListener, 
 
         locationManager.requestLocationUpdates(provider, 400, 1, this);
 
-        
+        Location location = locationManager.getLastKnownLocation(provider);
+        onLocationChanged(location);
     }
 
     @Override
